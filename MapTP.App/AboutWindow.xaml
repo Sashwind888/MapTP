@@ -5,20 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MapTP.App"
         mc:Ignorable="d"
-        Title="About MapTP" Height="237" Width="400">
+        Title="关于 MapTP" Height="251" Width="400">
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0,0,0,1"/>
     </WindowChrome.WindowChrome>
     <StackPanel Height="450" Margin="20">
-        <TextBlock HorizontalAlignment="Left" Margin="5" Text="About MapTP" Style="{StaticResource TextBlockTitleBold}"/>
-        <TextBlock HorizontalAlignment="Left" Margin="5" Text="MapTP v2.0.0 © Lingrottin 2023-2024, some rights reserved" Style="{StaticResource TextBlockDefault}"/>
-        <TextBlock HorizontalAlignment="Left" Margin="5" Text="Hugely inspired by emoacht/RawInput.Touchpad" Style="{StaticResource TextBlockDefaultPrimary}"/>
-        <TextBlock HorizontalAlignment="Left" Margin="5" Text="The program is open sourced under MIT license." Style="{StaticResource TextBlockDefault}" TextWrapping="Wrap"/>
-        <TextBlock HorizontalAlignment="Left" Margin="5" Style="{StaticResource TextBlockDefault}" TextWrapping="Wrap">
-            <Hyperlink Click="Hyperlink_Click" NavigateUri="https://github.com/lingrottin/MapTP">
-                Source code
+        <TextBlock HorizontalAlignment="Left" Margin="5" Text="关于 MapTP" Style="{StaticResource TextBlockTitleBold}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="5" Text="MapTP v2.0.0 © Lingrottin 2023-2024，保留部分权利" Style="{StaticResource TextBlockDefault}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="5" Text="" Style="{StaticResource TextBlockDefault}">
+            汉化：
+            <Hyperlink Click="Hyperlink_Click" NavigateUri="https://github.com/Sashwind888">
+                 Sashwind888
             </Hyperlink>
         </TextBlock>
-        <Button Background="{x:Null}" Click="Close">Close</Button>
+        <TextBlock HorizontalAlignment="Left" Margin="5" Text="深受 emoacht/RawInput 的启发。触控板" Style="{StaticResource TextBlockDefaultPrimary}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="5" Text="这个程序使用 MIT license 开源" Style="{StaticResource TextBlockDefault}" TextWrapping="Wrap"/>
+        <TextBlock HorizontalAlignment="Left" Margin="5" Style="{StaticResource TextBlockDefault}" TextWrapping="Wrap">
+            <Hyperlink Click="Hyperlink_Click" NavigateUri="https://github.com/lingrottin/MapTP">
+                查看 Github 上的源代码
+            </Hyperlink>
+        </TextBlock>
+        <Button Background="{x:Null}" Click="Close" Content="关掉"/>
     </StackPanel>
 </Window>

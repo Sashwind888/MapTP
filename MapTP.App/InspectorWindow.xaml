@@ -25,14 +25,14 @@
                     <ColumnDefinition Width="6*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="StartButton" Grid.Column="0" BorderBrush="Transparent" Background="Transparent" Foreground="White" Click="StartButtonClick">Start</Button>
+                <Button x:Name="StartButton" Grid.Column="0" BorderBrush="Transparent" Background="Transparent" Foreground="White" Click="StartButtonClick" Content="开始"/>
                 <Button x:Name="StopButton" Grid.Column="0" BorderBrush="Transparent" Background="DarkRed" Foreground="White" Click="StopButtonClick" Visibility="Collapsed">Stop</Button>
                 <Border x:Name="TitleBar" Grid.Column="2" BorderThickness="0" Background="#33ffffff" MouseLeftButtonDown="OnTitleBarMouseDown">
-                    <Label Background="Transparent" BorderBrush="Transparent" Foreground="White">Drag here to move</Label>
+                    <Label Background="Transparent" BorderBrush="Transparent" Foreground="White" Content="拖动此处移动"/>
                 </Border>
                 <Grid x:Name="CloseGrid" Grid.Column="3" Background="#33112255"
                           MouseEnter="CloseGrid_MouseEnter" MouseLeave="CloseGrid_MouseLeave" MouseLeftButtonUp="CloseGrid_Click">
-                    <Label Background="Transparent" BorderBrush="Transparent" Foreground="White" Margin="0,5,0,5" Width="Auto">Close</Label>
+                    <Label Background="Transparent" BorderBrush="Transparent" Foreground="White" Margin="0,5,0,5" Width="Auto" Content="关闭"/>
                 </Grid>
             </Grid>
         </Grid>

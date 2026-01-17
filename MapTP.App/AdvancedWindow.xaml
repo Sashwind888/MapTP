@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MapTP.App"
         mc:Ignorable="d"
-        Title="MapTP - Log Window" Height="200" MinHeight="200" Width="430">
+        Title="MapTP - 日志窗口" Height="200" MinHeight="200" Width="430">
   <Grid Margin="10,10,10,10">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-    <TextBox x:Name="LogBox" Margin="0,0,0,10"  TextWrapping="Wrap"
+        <TextBox x:Name="LogBox" Margin="0,0,0,10"  TextWrapping="Wrap"
   IsReadOnly="True"
-  VerticalScrollBarVisibility="Visible" VerticalContentAlignment="Bottom">Log will appear here.</TextBox>
+  VerticalScrollBarVisibility="Visible" VerticalContentAlignment="Bottom" Text="日志将会在这里显示"/>
         <Grid Grid.Row="1" Margin="7,0,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -23,10 +23,10 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <CheckBox Grid.Column="0" x:Name="AutoScrollCB" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="154" IsChecked="True" Content="Auto scroll"/>
-            <CheckBox Grid.Column="1" x:Name="OneLineCB" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="154" IsChecked="False" Content="One line"/>
-            <CheckBox Grid.Column="0" Grid.Row="1" x:Name="TPInputCB" HorizontalAlignment="Left" Height="23"  VerticalAlignment="Top" Width="154" IsChecked="True" Content="Show touchpad inputs"/>
-            <CheckBox Grid.Column="1" Grid.Row="1" x:Name="TPFirstCB" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="154" IsChecked="True" Content="Show Contact 0 only"/>
+            <CheckBox Grid.Column="0" x:Name="AutoScrollCB" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="154" IsChecked="True" Content="自动滚动"/>
+            <CheckBox Grid.Column="1" x:Name="OneLineCB" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="154" IsChecked="False" Content="只显示最新一行日志"/>
+            <CheckBox Grid.Column="0" Grid.Row="1" x:Name="TPInputCB" HorizontalAlignment="Left" Height="23"  VerticalAlignment="Top" Width="154" IsChecked="True" Content="显示触控板输入"/>
+            <CheckBox Grid.Column="1" Grid.Row="1" x:Name="TPFirstCB" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="154" IsChecked="True" Content="仅显示 Contact 0"/>
         </Grid>
   </Grid>
 </Window>

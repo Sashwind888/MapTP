@@ -43,7 +43,7 @@ namespace MapTP.App
                             {
                                 X = (int)Math.Ceiling((double)(x.X / 100f)) * 100;
                                 Y = (int)Math.Ceiling((double)(x.Y / 100f)) * 100;
-                                TouchpadSize.Text = $"Touchpad size: {X}, {Y}";
+                                TouchpadSize.Text = $"触控板大小: {X} x {Y}";
                             }
                         }
                     }

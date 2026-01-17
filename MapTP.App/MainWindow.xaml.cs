@@ -116,7 +116,7 @@ namespace MapTP.App
             {
                 TpAreaRect.Width = CalculateRectangle(TouchpadSizeX, TouchpadSizeY);
                 TpRectGrid.Width = CalculateRectangle(TouchpadSizeX, TouchpadSizeY);
-                TouchpadSizeTB.Text = $"Touchpad size: {TouchpadSizeX}x{TouchpadSizeY}";
+                TouchpadSizeTB.Text = $"触控板大小: {TouchpadSizeX}x{TouchpadSizeY}";
             }
             return;
         }
@@ -206,7 +206,7 @@ namespace MapTP.App
             }
             else
             {
-                HandyControl.Controls.MessageBox.Show("Please calibrate first!");
+                HandyControl.Controls.MessageBox.Show("请先校准!");
             }
         }
 
@@ -225,7 +225,7 @@ namespace MapTP.App
                 this.ShowInTaskbar = false;
                 TrayShowMenuItem.IsEnabled = true;
                  new ToastContentBuilder()
-                        .AddText("MapTP is hidden to the taskbar tray!").Show();
+                        .AddText("MapTP在任务栏托盘中处于隐藏状态!").Show();
             }
             else WindowState = WindowState.Minimized;
         }
@@ -234,7 +234,7 @@ namespace MapTP.App
         {
             if (HideCB.IsChecked.Value)
             {
-                var r=MessageBox.Show("Are you sure to close MapTP?\n(use minimize to hide MapTP into tray icon)", "Closing MapTP", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                var r=MessageBox.Show("你确定要退出 MapTP?\n(使用“最小化”按键将MapTP隐藏为托盘图标)", "关闭MapTP", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (r != MessageBoxResult.Yes) return;
             }
             Close();
@@ -267,7 +267,7 @@ namespace MapTP.App
             ScreenSizeY = (int)Math.Floor(ScreenManager.GetScreenHeight());
             ScAreaRect.Width = CalculateRectangle(ScreenSizeX, ScreenSizeY);
             ScRectGrid.Width = ScAreaRect.Width;
-            ScreenSizeTB.Text = $"Screen Size: {ScreenSizeX}x{ScreenSizeY}";
+            ScreenSizeTB.Text = $"屏幕大小: {ScreenSizeX}x{ScreenSizeY}";
 
             started = false;
 
@@ -348,12 +348,12 @@ namespace MapTP.App
             started = true;
             StartButton.Visibility = Visibility.Collapsed;
             StopButton.Visibility = Visibility.Visible;
-            TrayWorkingMenuItem.Header = "MapTP is working...";
-            TrayStartMenuItem.Header = "Stop";
+            TrayWorkingMenuItem.Header = "MapTP 正在运行...";
+            TrayStartMenuItem.Header = "停止";
             TrayStartMenuItem.Click -= StartButtonClick;
             TrayStartMenuItem.Click += StopButtonClick;
             TrayIcon.Icon = new BitmapImage(new Uri("pack://application:,,,/logo.ico"));
-            TrayIcon.TooltipText = "MapTP (active)";
+            TrayIcon.TooltipText = "MapTP (活动状态)";
         }
 
         private void StopButtonClick(object sender, RoutedEventArgs e)
@@ -361,12 +361,12 @@ namespace MapTP.App
             started = false;
             StopButton.Visibility = Visibility.Collapsed;
             StartButton.Visibility = Visibility.Visible;
-            TrayWorkingMenuItem.Header = "MapTP is not working...";
-            TrayStartMenuItem.Header = "Start";
+            TrayWorkingMenuItem.Header = "MapTP 未运行...";
+            TrayStartMenuItem.Header = "启动";
             TrayStartMenuItem.Click -= StopButtonClick;
             TrayStartMenuItem.Click += StartButtonClick;
             TrayIcon.Icon = new BitmapImage(new Uri("pack://application:,,,/logo-inactive.ico"));
-            TrayIcon.TooltipText = "MapTP (inactive)";
+            TrayIcon.TooltipText = "MapTP (未运行状态)";
         }
 
         /// <summary>
